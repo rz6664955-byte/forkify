@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stely.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+      <h1>Forkify Recipes</h1>
+      <p>
+        Choose a category to discover the best recipes from around the world
+      </p>
+
+      <!-- Search buttons to change API query -->
+      <div class="search-buttons">
+    <button id="pizza" class="btn-search active">Pizza</button>
+    <button id="burger" class="btn-search">Burger</button>
+    <button id="pasta" class="btn-search">Pasta</button>
+    <button id="salad" class="btn-search">Salad</button>
+    <button class="btn-search" onclick="fetchRecipes('chicken', this)">
+        Chicken
+    </button>
+</div>
+<div class="search-container">
+  <input
+    id="input"
+    type="search"
+    placeholder="Search for your favourite recipe"
+  />
+  <button id="btn-search" class="btn-search">Search</button>
+</div>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+      <div class="recipes-grid" id="recipesContainer">
+        <!-- Recipes will be dynamically injected here via JS -->
+      </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
